@@ -20,7 +20,6 @@ type TriageResponse = {
   rawOutput: string;
   parsed: TriageOutput | null;
   parseError?: string;
-  model: string;
 };
 
 const examples = [
@@ -100,12 +99,9 @@ export default function Home() {
               Company Triage Simulator
             </h1>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-[#596069]">
-              Test one customer message at a time and inspect the exact Gemini
-              JSON beside a clean agent-ready breakdown.
+              Test one customer message at a time and inspect the exact JSON
+              beside a clean agent-ready breakdown.
             </p>
-          </div>
-          <div className="rounded-md border border-[#c9d8d5] bg-[#eff7f5] px-3 py-2 text-sm text-[#235b55]">
-            Model: <span className="font-semibold">Gemini 2.5 Flash</span>
           </div>
         </header>
 
@@ -164,16 +160,16 @@ export default function Home() {
                 <div>
                   <h2 className="text-base font-semibold">Exact AI JSON</h2>
                   <p className="mt-1 text-sm text-[#aab4c0]">
-                    Raw model text returned by Gemini.
+                    Raw JSON returned by the triage engine.
                   </p>
                 </div>
                 <span className="rounded-md bg-white/10 px-2 py-1 text-xs text-[#dbe4ec]">
-                  {result?.model ?? "Waiting"}
+                  {result ? "Complete" : "Waiting"}
                 </span>
               </div>
               <pre className="min-h-[260px] max-h-[420px] overflow-auto whitespace-pre-wrap p-4 font-mono text-xs leading-5 text-[#dce7ef]">
                 {result?.rawOutput ??
-                  "Run triage to see the exact JSON returned by the model."}
+                  "Run triage to see the exact JSON returned by the triage engine."}
               </pre>
               {result?.parseError ? (
                 <div className="border-t border-[#4b2f2f] bg-[#2a1717] px-4 py-3 text-sm text-[#ffc7bd]">

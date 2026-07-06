@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Company Triage Simulator",
-  description: "Simulate customer support triage with Gemini 2.5 Flash.",
+  description: "Simulate customer support triage and draft routing output.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
