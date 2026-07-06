@@ -49,3 +49,4 @@ next-env.d.ts
 /deliverables/
 /scripts/
 /worker/
+/public/pipeline-visual.html
