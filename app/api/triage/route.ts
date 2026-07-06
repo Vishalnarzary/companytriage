@@ -52,7 +52,7 @@ URGENCY SCALE (1-5, whole message):
 5 = critical (safety, legal threat, self-harm mention, active fraud/security issue)
 
 REQUIRES_HUMAN = true when ANY of:
-- urgency >= 4
+- urgency >= 3
 - category includes abuse_or_threat
 - refund/compensation above $500 threshold is implied
 - customer explicitly asks for a manager/human/legal
